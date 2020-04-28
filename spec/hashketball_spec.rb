@@ -166,16 +166,16 @@ describe 'hashketball' do
 
   describe '#player_stats' do
     it 'returns all stats for a given player' do
-      expect(player_stats("Jeff Adrien")).to eq(jeff_adrien)
-      expect(player_stats("Bismack Biyombo")).to eq(bismack_biyombo)
-      expect(player_stats("DeSagna Diop")).to eq(desagna_diop)
-      expect(player_stats("Ben Gordon")).to eq(ben_gordon)
-      expect(player_stats("Kemba Walker")).to eq(kemba_walker)
-      expect(player_stats("Alan Anderson")).to eq(alan_anderson)
-      expect(player_stats("Reggie Evans")).to eq(reggie_evans)
-      expect(player_stats("Brook Lopez")).to eq(brook_lopez)
-      expect(player_stats("Mason Plumlee")).to eq(mason_plumlee)
-      expect(player_stats("Jason Terry")).to eq(jason_terry)
+      expect(player_stats("Jeff Adrien")).to eq({ :number => 4, :shoe => 18, :points => 10, :rebounds => 1, :assists => 1, :steals => 2, :blocks => 7, :slam_dunks => 2 })
+      expect(player_stats("Bismack Biyombo")).to eq({:number => 0, :shoe => 16, :points => 12, :rebounds => 4, :assists => 7, :steals => 22, :blocks => 15, :slam_dunks => 10 })
+      expect(player_stats("DeSagna Diop")).to eq({:assists=>12, :blocks=>5, :number=>2, :points=>24, :rebounds=>12, :shoe=>14, :slam_dunks=>5, :steals=>4})
+      expect(player_stats("Ben Gordon")).to eq({:assists=>2, :blocks=>1, :number=>8, :points=>33, :rebounds=>3, :shoe=>15, :slam_dunks=>0, :steals=>1})
+      expect(player_stats("Kemba Walker")).to eq({:assists=>12, :blocks=>5, :number=>33, :points=>6, :rebounds=>12, :shoe=>15, :slam_dunks=>12, :steals=>7})
+      expect(player_stats("Alan Anderson")).to eq({:assists=>12, :blocks=>1, :number=>0, :points=>22, :rebounds=>12, :shoe=>16, :slam_dunks=>1, :steals=>3})
+      expect(player_stats("Reggie Evans")).to eq({:assists=>12, :blocks=>12, :number=>30, :points=>12, :rebounds=>12, :shoe=>14, :slam_dunks=>7, :steals=>12})
+      expect(player_stats("Brook Lopez")).to eq({:assists=>10, :blocks=>1, :number=>11, :points=>17, :rebounds=>19, :shoe=>17, :slam_dunks=>15, :steals=>3})
+      expect(player_stats("Mason Plumlee")).to eq({:assists=>6, :blocks=>8, :number=>1, :points=>26, :rebounds=>11, :shoe=>19, :slam_dunks=>5, :steals=>3})
+      expect(player_stats("Jason Terry")).to eq({:assists=>2, :blocks=>11, :number=>31, :points=>19, :rebounds=>2, :shoe=>15, :slam_dunks=>1, :steals=>4})
     end
 
   end
